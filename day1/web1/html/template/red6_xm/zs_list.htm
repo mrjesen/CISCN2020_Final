@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#pagetitle}</title>
+<meta content="{#pagedescription}" name="description" />
+<meta content="{#pagekeywords}" name="keywords" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/qt.js"></script> 
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="right"> 
+<div class="titles">查看过的招商信息</div>
+<div class="content1">
+{#showcookiezs:3,60,60,5}			
+</div>
+</div>
+<div class="left"> 
+<div class="station2">
+{#station}
+</div>
+<div class="left_content">
+	<form action="/zs/search.php" method="get" name="myform" id="myform">
+          <table border="0" cellpadding="7" cellspacing="0">
+            <tr> 
+              <td width="98" align="right">关 键 词：</td>
+              <td width="435"><input type="radio" name="yiju" value="Pname"  />
+                按产品名称 
+                <input name="yiju" type="radio" value="Pcompany" />
+                按招商厂家 
+                <input name="keyword" type="text"  id="keyword" value="" size="25" maxlength="255"/> 
+                <input name="Submit3" type="submit"  value="搜索"  /></td>
+            </tr>
+            <tr> 
+              <td align="right">所属类别：</td>
+              <td>{#formbigclass}</td>
+            </tr>
+            <tr>
+              <td align="right">投资金额：</td>
+              <td><a href="/zs/search.php?tz=1万以下">1万以下</a> <a href="/zs/search.php?tz=1-10万" >1-10万</a> <a href="/zs/search.php?tz=10-20万">10-20万</a> <a href="/zs/search.php?tz=20-50万">20-50万</a> <a href="/zs/search.php?tz=50-100万" >50-100万</a> <a href="/zs/search.php?tz=100万以上">100万以上</a></td>
+            </tr>
+            <tr>
+              <td align="right">所在区域：</td>
+              <td>{#formprovince}</td>
+            </tr>
+           
+          </table>
+        </form>
+</div>
+
+<div class="left_content">
+<div class="boxbigclass">{#zsclass}</div>
+</div>
+
+<div class="left_content">
+<div style="text-align:right;">{#form_px}{#showselectpage}{#form_xs}</div>
+{zs}
+<div class="content4">
+{loop_window}
+<li>
+<table width='130' height='130' border='0' cellpadding='0' cellspacing='1' class='bgcolor2'>
+<tr>
+<td align='center' bgcolor='#FFFFFF'> 
+<a href='{#url}' target='_blank'><img src="{#img}"  border='0'></a>
+</td>
+</tr>
+</table>
+{#proname:9}
+</li>
+{/loop_window}
+
+{loop_list}
+<div id='Layer{#i}' class='hiddiv'></div>
+<table  width='100%' border='0' cellspacing='0' cellpadding='0' class="zslist">
+<tr> 
+<td width='157' align="center"><table width='130' height='130' border='0' cellpadding='0' cellspacing='1' class='bordercccccc'>
+<tr> 
+<td align='center' onMouseOver="showfilter(Layer{#i});window.document.getElementById('Layer{#i}').innerHTML='<img src={#imgbig} width=400>'" onMouseOut='showfilter(Layer{#i})'>
+<a href='{#url}'><img src="{#img}"></a></td>
+</tr>
+</table></td>
+<td width='800'><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr> 
+<td><a href='{#url}' class="bigbigword">{#proname:20}</a>{#elite}<br />
+  所在地域：{#province}-{#city}<br>
+产品特点：{#prouse:20}<br>
+投资额度：{#tz} 
+<div class="zslist_button">
+  <li><div class="lxfs"><a href='{#url}#contact' target='_blank'></a></div></li>
+  <li><div class="liuyan"><a href='{#url}#dl_liuyan' target='_blank'></a></div></li>
+  <li><div class="shoucang"><a href="javascript:void(0)" rel="sidebar" onClick="shoucang('{#siteurl}{#url}','{#proname}')"></a></div></li>
+  <li>{#qq}</li>  </div> </td>
+</tr>
+
+</table> </td></tr>
+</table>
+<div class='boxxian'></div>
+{/loop_list}
+</div>
+
+<div style='clear:both'></div>
+<div class='fenyei'>{#fenyei}</div>
+{/zs}
+
+</div>
+			
+</div>
+</div>
+
+{#sitebottom}
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+elite|||empty|||empty|||0|||1|||999|||10|||id|||10|||30|||1|||<table border="0" cellspacing="0" cellpadding="5" width="100%"><tr>|||<td width="33%"  class=" x_bottom">{#xuhao} <A href=show.php?id={#id}>{#title}</A></td>
+<td width="23%"  class=" x_bottom">{#answer_num}回答</td>
+<td width="10%"  class=" x_bottom">{#zhuangtai}</td>
+<td width="10%"  class=" x_bottom">{#sendtime}</td>|||</tr>
+</table>

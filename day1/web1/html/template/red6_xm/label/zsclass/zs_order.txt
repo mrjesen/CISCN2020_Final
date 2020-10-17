@@ -1,0 +1,6 @@
+﻿zs_order|||0|||8|||2|||<table width="100%" border="0" cellspacing="8" ellpadding="0" class="bordercccccc"><tr>|||<td>
+<div class=boxA>
+<div class=boxAtitle>{#classname}排行</div>
+{@zsshow.zs_order}
+</div>
+</td>|||</table>

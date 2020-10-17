@@ -1,0 +1,10 @@
+showzsimg2|||empty|||1|||0|||0|||0|||10||||||hit|||6|||2|||<table width="100%" border="0" cellspacing="0" cellpadding="4"><tr>|||<td width="50%" align="center">
+<table width= border="0" cellpadding="0" cellspacing="1" class="bgcolor2">
+<tr>
+<td bgcolor='#FFFFFF' height="100" align="center">
+<a href='web/{#editor}' target=_blank><img src={#img} border=0 onload=resizeimg(100,100,this)></a>
+</td>
+</tr>
+<tr><td align=center><a href=web/{#editor} target=_blank>{#proname}</a></td></tr>
+</table>
+</td>|||</table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}"/>
+<meta name="description" content="{#pagedescription}"/>
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="left">
+<div class="station2">
+ {#station}
+
+</div>
+<div class="left_content" style="margin-bottom:8px">
+<form name="myform" method="post" action="?">
+          <table width="100%" border="0" cellspacing="0" cellpadding="8">
+            <tr> 
+              <td align="right">代理品种：</td>
+              <td><input name="keyword" type="text"  id="keyword" value="{#formkeyword}" size="50" maxlength="50"/> 
+                <input name="Submit" type="submit" id="Submit2" value="搜索" /></td>
+            </tr>
+            <tr> 
+              <td width="15%" align="right">代理省份：</td>
+              <td width="85%">{#formprovince}{#formcity}</td>
+          
+            <tr> 
+              <td align="right">所属类别：</td>
+              <td>{#formbigclass}</td>
+            </tr>
+            {#selected}
+          </table>
+        </form>
+
+</div>
+{#dllist}
+
+</div>
+<div class="right">
+<div class="title1">按热门词搜索</div>
+<div class="content1">{#keyword:dl,32,4,}</div>
+<div class="title1">按代理区域搜索</div>
+<div class="content1">{#ShowProvince}</div>
+</div>
+</div>
+{#sitebottom}
+</div>
+</body>
+</html>

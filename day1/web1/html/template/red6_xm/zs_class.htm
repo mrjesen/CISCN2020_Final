@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#pagetitle}</title>
+<meta content="{#pagedescription}" name="description" />
+<meta content="{#pagekeywords}" name="keywords" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="left">
+<ul>
+<li id="leftleft">
+  <div class="box"> 
+   {@zsshow.zsflash}  
+</div>
+</li>
+<li id="leftright">
+		  <div class="boxtop"> 
+             {@zsshow.showzsnew}
+			</div>
+          </li>
+</ul>
+</div>
+<div class="right">
+<div class="title1">ƼƷ</div>
+<div class="content1">
+{@zsshow.zselite}
+</div>
+
+</div>
+</div>
+
+<div class="pagebody"> 
+            <div class="title3"> 
+		{#bigclass}
+          </div> 		  
+<div class="content1">
+{@zsshow.showzsimg}        
+</div>
+</div>
+{#sitebottom}
+</div>
+</body>
+</html>

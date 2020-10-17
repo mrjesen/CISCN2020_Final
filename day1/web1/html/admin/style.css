@@ -1,0 +1,119 @@
+@charset "utf-8";
+form{margin: 0;padding: 0;}
+ul,li{list-style:none;}
+body{
+	color:#000000;font-size:12px;line-height:20px;font-family: Arial,"微软雅黑",simsun;word-break:break-all;word-wrap:break-word;
+	margin: 0px;background-color:#B4CCEB;
+}
+img{border:0px}
+a{color: #396eb5;text-decoration: none;}
+a:hover {color: #FF3300;}
+td {font-size:12px;font-family: Arial,"微软雅黑"}
+hr{border-top:solid 1px #b4cceb}
+.bigtextarea{width:100%;height:420px}
+
+.buttons2 {background-color: #FFEB9C;border:solid 1px #C8C190;height:25px;padding:0 5px;cursor:pointer;color: #7B2E00;font-family: "微软雅黑";
+-webkit-border-radius: 3px;-moz-border-radius:3px;min-width:70px}
+.buttons2:hover {background:#FF6721;color:#FFFFFF;text-decoration: none;}
+
+.buttons {background-color: #c9defa;border:solid 1px #b4cceb;height:25px;padding:0 5px;cursor:pointer;color: #083772;
+-webkit-border-radius: 3px;-moz-border-radius:3px;min-width:70px}
+.buttons:hover {background:#FF6721;color:#FFFFFF;text-decoration: none;border:solid 1px #ff3300;}
+
+.trtitle{background-color: #F0F5FB;height:40px}
+.trcontent{background-color:#FFFFFF;transition:all 0.1s ease-out;height:40px}
+.trcontent:hover{background-color:#F3F5F9;}
+
+.trcontent2{background-color:#F3F5F9;transition:all 0.1s ease-out;}
+.trcontent2:hover{background-color:#FFFFFF;}
+
+.border,.border2 {border-left:solid 1px #B4CCEB;background-color: #F0F5FB;padding: 10px 10px;margin-bottom:0px;}
+.border{border-bottom:solid 1px #B4CCEB}
+.border a,.border2 a{padding:0 5px}
+
+.bgcolor1{background-color:#F1F6FC}
+.bgcolor{background-color:#B4CCEB;color:#F0F5FB}
+.bgcolor0{background-color:#396eb5;color:#F0F5FB}
+#chkAll{margin-left:5px}
+
+.boxsave{margin:0 auto;width:50%;padding:20px 0;}
+.boxsave .title {background-color: #396eb5;color:#ffffff;font-weight: bold;text-align: center;height: 40px;line-height:40px;}
+.boxsave .content_a{padding:10px 20px 10px 20px;background-color:#F1F6FC;border:solid 1px #FFFFFF;line-height:25px}
+.boxsave .editor{text-align:center;width:100%;border-top:solid 1px #dddddd;margin-top:10px;padding-top:10px}
+.boxsave .editor li{display:inline;padding:0 10px}
+
+.admintitle {
+	font-weight: bold;color:#396eb5;letter-spacing: 0.1em;text-align: center;
+	height: 25px;line-height: 25px;background-color: #c9defa;
+	}
+.admintitle a{color: #0066CC;} 
+.admintitle2 {background-color: #F0F5FB;border-left:solid 1px #b4cceb;border-bottom:solid 1px #b4cceb;
+font-weight: bold;text-align: left;height: 25px;}
+.docolor {color: #CCCCCC;}
+
+.tstitle {
+	background-color: #396eb5;
+	color: #FFFFFF;font-size: 14px;font-weight: bold;
+	height: 35px;text-align: center;
+}
+.px14 {font-size: 14px;line-height: 25px;}
+.userbar {
+	border-bottom:solid 1px #b4cceb;
+	background-color:#c9defa;
+	height:25px;line-height:25px;
+	color: #025bad;padding: 1px 10px 0 10px;
+}
+.center{text-align:center}
+.boxlink{}
+.boxlink li{float:left;background-color:#b4cceb}
+.boxlink li a{background-color:#396eb5;display:block;padding:0 5px;margin:1px 0px 0px 1px;width:125px;height:25px;line-height:25px;overflow:hidden;text-decoration: none;color:#ffffff;}
+.boxlink a:hover{background-color:#ffffff;color:#083772;text-decoration: none;}
+
+.bigword{font-family: Arial,"微软雅黑";font-size:30px;letter-spacing: 0.1em;}
+.fieldsetstyle{border:solid 1px #b4cceb;padding:5px;-webkit-border-radius: 3px;-moz-border-radius:3px;}
+#help{display:none;position:absolute;float:left;left:0px;border:solid 1px #FFCC00;background-color:#FFFF99;padding:10px;color:#000000}
+#loading{
+position: fixed;/* 相对于屏幕*/
+    top: 50%;left: 50%;height:100px;width:300px;margin-top:-50px;margin-left:-150px;
+	background-color:#666666;padding:10px;color:#FFF;line-height:100px;text-align:center;	
+}
+#tabs {
+  min-width:600px;
+  line-height:14px;
+  }
+#tabs ul {
+  margin:0;
+  padding:14px 10px 0 0px;
+  list-style:none;
+  }
+#tabs li {
+  float:left;
+  margin:0 1px;
+  padding:0;
+  }
+#tabs a {
+  float:left;
+  background:url("image/manage_tableft6.png") no-repeat left top;
+  margin:0;
+  padding:0 0 0 4px;
+  text-decoration:none;
+  }
+#tabs a span {
+  float:left;
+  display:block;
+  background:url("image/manage_tabright6.png") no-repeat right top;
+  padding:8px 8px 6px 6px;
+  color:#E9F4FF;
+  }
+#tabs a span {float:none;}
+/* End IE5-Mac hack */
+#tabs a:hover span {
+  color:#fff;
+  }
+#tabs a:hover {
+  background-position:0% -42px;
+  }
+#tabs a:hover span {
+  background-position:100% -42px;
+  color:#222;
+  }

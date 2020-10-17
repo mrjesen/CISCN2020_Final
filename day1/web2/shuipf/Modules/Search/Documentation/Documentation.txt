@@ -1,0 +1,1 @@
+sphinx 全文索引我用的是国产的http://www.coreseek.cncsft_mysql.conf 是我测试时候配置的~~测试木有问题~~~用这玩意搜索就是快。。。

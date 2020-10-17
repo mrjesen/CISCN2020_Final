@@ -1,0 +1,64 @@
+RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^[a-z0-9\-]+\.zzcms\.net$
+#RewriteCond %{HTTP_HOST} !^(www|bbs)\.zzcms\.net$
+#RewriteRule ^/?$ /%{HTTP_HOST}
+#RewriteRule ^/([a-z0-9\-]+)\.zzcms\.net/?$ /zt/show.php?editor=$1
+#RewriteRule ^/([a-z0-9\-]+)\.yyrxx\.com/?$ /area/show.php?province=$1
+
+RewriteRule default.htm$ /zt/show.php
+RewriteRule ^index.htm$ /index.php
+RewriteRule (zs|dl)/index.htm$ $1/index.php
+RewriteRule area/([0-9,a-z]*).htm$ area/show.php?province=$1
+
+#输入省名直达地方站，以下是排除的目录
+#RewriteCond $1 !^(web|zs|dl|zh|zx|company|user|admin|phpMyAdmin|ebak2008|install)
+#RewriteRule ^([a-z0-9A-Z_\-]+)(/)?$ area/show.php?province=$1
+
+RewriteRule ^zsclass/([0-9,a-z]*).htm$ /zsclass/class.php?b=$1
+RewriteRule ^zsclass/([0-9,a-z]*)$ /zsclass/zsclass.php?b=$1
+RewriteRule ^zsclass/([0-9,a-z]*)/(\d*).htm$ /zsclass/zsclass.php?b=$1&page=$2
+
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/$ $1/index.php
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/(zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask).htm$ $1/$1.php
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/(\d*).htm$ $1/$1.php?page=$2
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/([0-9,a-z]*)$ $1/$1.php?b=$2
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/([0-9,a-z]*)/(\d*).htm$ $1/$1.php?b=$2&page=$3
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/([0-9,a-z]*)/([0-9,a-z]*)$ $1/$1.php?b=$2&s=$3
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask)/([0-9,a-z]*)/([0-9,a-z]*)/(\d*).htm$ $1/$1.php?b=$2&s=$3&page=$4
+RewriteRule (zs|dl|zx|special|company|pp|zh|job|wangkan|baojia|ask|zt)/show-(\d*).htm$ $1/show.php?id=$2
+
+RewriteRule (zx|special)/class/(\d*)$ $1/class.php?b=$2 
+RewriteRule (zx|special)/show-(\d*)-(\d*).htm$ $1/show.php?id=$2&page=$3
+
+RewriteRule (help|link|sitemap).htm$ one/$1.php 
+RewriteRule siteinfo-(\d*).htm$ one/siteinfo.php?id=$1  
+RewriteRule (reg|user|zs)/([0-9,a-z]*).htm$ $1/$2.php 
+
+RewriteRule sell/zsshow-(\d*).htm$ zt/zsshow.php?cpid=$1
+#虚拟目录系统不会自动加/，这样在打开展示页是会回到根目录下，导致链接错，所以展厅导航的虚拟目录后都加了/
+RewriteRule sell$ zt/zs.php
+RewriteRule sell/zs-(\d*).htm$ zt/zs.php?id=$1
+RewriteRule sell/zs-(\d*)-([0-9,a-z,A-Z]*).htm$ zt/zs.php?id=$1&bigclass=$2
+RewriteRule sell/zs-(\d*)-([0-9,a-z,A-Z]*)-([0-9,a-z,A-Z]*).htm$ zt/zs.php?id=$1&bigclass=$2&smallclass=$3
+RewriteRule sell/zs-(\d*)-([0-9,a-z,A-Z]*)-([0-9,a-z,A-Z]*)-(\d*).htm$ zt/zs.php?id=$1&bigclass=$2&smallclass=$3&page=$4
+RewriteRule brand$ zt/pp.php
+RewriteRule brand/pp-(\d*).htm$ zt/pp.php?id=$1
+RewriteRule brand/pp-(\d*)-(\d*).htm$ zt/pp.php?id=$1&page=$2
+RewriteRule brand/ppshow-(\d*).htm$ zt/ppshow.php?cpid=$1
+RewriteRule jobs$ zt/job.php
+RewriteRule jobs/job-(\d*).htm$ zt/job.php?id=$1
+RewriteRule jobs/job-(\d*)-(\d*).htm$ zt/job.php?id=$1&page=$2
+RewriteRule jobs/jobshow-(\d*).htm$ zt/jobshow.php?cpid=$1
+RewriteRule introduce$ zt/companyshow.php
+RewriteRule introduce/companyshow-(\d*).htm$ zt/companyshow.php?id=$1 
+RewriteRule contact$ zt/contact.php?id=$1 
+RewriteRule contact/contact-(\d*).htm$ zt/contact.php?id=$1 
+RewriteRule licence$ zt/licence.php
+RewriteRule licence/licence-([0-9,a-z]*).htm$ zt/licence.php?id=$1 
+RewriteRule guestbook$ zt/liuyan.php
+RewriteRule guestbook/liuyan-([0-9,a-z]*).htm$ zt/liuyan.php?id=$1 
+RewriteRule news$ zt/news.php 
+RewriteRule news/$ zt/news.php 
+RewriteRule news/news-(\d*).htm$ zt/news.php?id=$1 
+RewriteRule news/news-(\d*)-(\d*).htm$ zt/news.php?id=$1&page=$2
+RewriteRule news/newsshow-(\d*).htm$ zt/newsshow.php?newsid=$1

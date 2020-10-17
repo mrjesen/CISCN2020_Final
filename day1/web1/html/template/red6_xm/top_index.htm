@@ -1,0 +1,63 @@
+<script language="JavaScript" src="/js/qt.js"></script>
+<div class="top1">
+<div class="main">
+<div>
+<span>
+{case1}您好！<b>{#username}</b> [ <a href='/user/index.php'>进入用户中心</a> | <a href='/user/logout.php'>安全退出</a> ] {/case1}
+{case2}
+<img src='/image/user.gif' style="margin-top:5px"> 您好！客人 [<a href={#linklogin} target='_blank'>请登录</a>] [<a href={#linkreg} target='_blank'>免费注册</a>] 
+<a href='/3/qq_connect2.0/index.php'><img src='/image/Connect_logo_2.png' border='0' style="margin-top:5px"></a>
+{/case2}
+</span> 
+
+<h3><a href="/one/help.php" target="_blank" style="color:#666">使用帮助</a>
+| <a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('{#siteurl}');" style="color:#666666">设为首页</a>
+| <a href="javascript:window.external.addFavorite('{#siteurl}','{#sitename}');" style="color:#666666">收藏本站</a>
+|<font color=red> 客服电话:{#kftel}</font></h3>
+    </div>
+</div>
+</div>
+<div class="main">
+	
+  <table width="100%" height="80" border="0" cellpadding="10" cellspacing="0" class="bgcolor1">
+    <tr> 
+      <td width="300"><a href="{#siteurl}"><img src="{#logourl}" border="0" alt="&lt;h1&gt;{#sitekeyword}&lt;/h1&gt;" ></a></td>
+      <td> 
+	  <div style="width:450px">热门词：{#showkeyword:zs,5,6}</div>
+	  <div class="boxsearch2"> 
+          <div id="D_con1"> 
+            <form name="myform" method="get" action="/zs/search.php">
+              <input name="keyword" type="text" class="biaodan3" x-webkit-speech>
+              <input name="search" type="submit" value="搜 索" class="buttons_search2" border="0" />
+            </form>
+          </div>
+        </div></td>
+		<td width="70" align="center"><div id="fbdl"><a href="{#siteurl}/dl/dladd.php" target="_blank"></a></div></td>
+       <td width="70" align="center"><div id="fbzs"><a href="{#siteurl}/user/index.php?gotopage=zs.php" target="_blank"></a></div></td>
+    <td width="70" align="center"><div id="hyzx"><a href="{#siteurl}/user/"></a></div> </td>
+    </tr>
+  </table>
+{#showannounce:3,90} </div>
+<div class="nav"> 
+<div class="main"> 
+<ul>
+<li class="current"><a href='{#siteurl}'>网站首页</a></li>
+<li><a href='{#siteurl}/zs/fuzhuangxiebao'>服饰鞋包</a></li>
+<li><a href='{#siteurl}/zs/tesecanyin'>特色餐饮</a></li>
+<li><a href='{#siteurl}/zs/meirongyangsheng'>美容养生 </a></li>
+<li><a href='{#siteurl}/zs/lipinzhuangshi'>饰品玩具</a></li>
+<li><a href='{#siteurl}/zs/jiajuhuanbao'>家居环保</a></li>
+<li><a href='{#siteurl}/zs/jiancai'>建材原料</a></li>
+<li><a href='{#siteurl}/zs/muyingyongpin'>母婴用品</a></li>
+<li><a href='{#siteurl}/zs/jiaoyuwangluo'>教育网络</a></li>
+<li><a href='{#siteurl}/zs/order.php'>排 行 榜</a></li>	
+</ul>
+</div>
+</div>
+<div class="item2"> 
+<div class="main"> 
+<a href="{#siteurl}/zx/1">热点资讯</a> <a href="{#siteurl}/zx/2">创业指南</a> <a href="{#siteurl}/zx/3">最新动态</a> <a href="{#siteurl}/zx/4">市场行情</a>
+<a href="{#siteurl}/zx/5">创业秘籍</a> <a href="{#siteurl}/zx/6">最佳商机</a> <a href="{#siteurl}/zx/7">项目分析</a> <a href="{#siteurl}/zx/8">草根必读</a> 
+<a href="{#siteurl}/zx/9">创业问答</a> <a href="{#siteurl}/zx/10">创业经历</a> <a href="{#siteurl}/zx/11">暴利行业</a> <a href="{#siteurl}/zx/12">项目筛选</a>
+</div>
+</div>

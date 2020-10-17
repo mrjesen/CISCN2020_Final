@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}"/>
+<meta name="description" content="{#pagedescription}" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<script>
+//控制字体大小
+function fontZoom(size){
+document.getElementById('fontzoom').style.fontSize=size+'px'
+}
+function checkform(){
+  if (document.form2.content.value==""){
+    alert("内容不能为空！");
+    //document.form2.content.focus();
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div style="float:right;margin:12px 10px 0 0" class="buttons"><a href="/user/index.php?gotopage=ask.php?do=add">我要提问</a></div>
+<div class="station"><h3>{#station}</h3></div>
+<div class="pagebody">
+      <div class="box"> 
+        <div id="BoxInfoTitle">{#title}</div>
+        <div id="BoxInfoTitleNext"> 
+          {#sm}
+        </div>
+       <div class="content">{#content}</div>
+      </div>
+
+<div class="titles">回答</div>
+{#pinglun}
+
+{huida}
+<div class="titles">我来回答</div>
+<div class="content">
+<form name="form2" id="form2" method="post" action="">
+{#textarea} 
+<script type="text/javascript" src="../3/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">CKEDITOR.replace('content');</script> 
+<input name="about" type="hidden"  value="{#id}" />
+<input name="ip" type="hidden"  value="{#getuserip}" />
+<input name="action" type="hidden"  value="addpinglun" />
+<input name="user" value="{#pinglunren}" size="4" type="hidden"/>
+<input type="submit" name="Submit" value="我来回答" />
+</form>			
+</div>
+{/huida}
+
+</div>
+</div>
+{#sitebottom}
+</body>
+</html>

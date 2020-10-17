@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Battle Prepare</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="./static/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="./static/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/util.css">
+	<link rel="stylesheet" type="text/css" href="./static/main.css">
+<!--===============================================================================================-->
+	<style>
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 8px 16px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+		.button2 {
+			background-color: white;
+			color: black;
+			border: 2px solid black;
+		}
+
+		.button2:hover {
+			background-color: black;
+			color: white;
+		}
+		.select {
+			display: inline-block;
+			width: 560px;
+			position: relative;
+			vertical-align: middle;
+			padding: 0;
+			overflow: hidden;
+			background-color: #fff;
+			color: black;
+			border: 0px ;
+			text-shadow: none;
+			border-radius: 4px;
+			transition: box-shadow 0.25s ease;
+			z-index: 0;
+			left:-5px;
+		}
+		.text {
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('static/bg-02.jpeg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="opacity: 0.7">
+				<form class="login100-form validate-form" action="/start" method="post" enctype="application/x-www-form-urlencoded">
+					<span class="login100-form-title p-b-49">
+						Prepare To Battle
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-23">
+						<span class="label-input100">
+							<input type="text" name="name" placeholder="你的ID">
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23">
+						<span class="label-input100">
+							<input type="text" name="round_to_use" placeholder="哪一回合使用物品">
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23">
+						<span class="label-input100">
+							<select class="select" name="career" >
+								<option disabled selected style='display:none;'>请选择英雄的职业</option>
+							  	<option value ="warrior">战神领主</option>
+							  	<option value ="high_priest">奥术祭司</option>
+							  	<option value="shooter">暗夜游侠</option>
+							</select>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23">
+						<span class="label-input100">
+							<select class="select" name="item">
+								<option disabled selected style='display:none;'>请选择携带的物品</option>
+								  <option value ="ZLYG">治疗药膏</option>
+								  <option value ="BYZF">白银之锋</option>
+								  <option value="XELD">邪恶镰刀</option>
+							</select>
+						</span>
+					</div>
+
+
+					<center><button class="button button2">Battle</button></center>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="./static/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/popper.js"></script>
+	<script src="./static/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/moment.min.js"></script>
+	<script src="./static/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/main.js"></script>
+
+
+
+</body></html>

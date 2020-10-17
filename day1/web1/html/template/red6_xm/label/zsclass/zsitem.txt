@@ -1,0 +1,13 @@
+﻿zsitem|||0|||8|||1|||<div>|||<div class='titlezs'> 
+<span>	
+{#zssmallclass:12}
+</span> 
+<h3>
+<a style='font-weight:bold;color:#FFFFFF' href=/zs/zs.php?b={#classid}>{#classname}</a>
+</h3>	
+</div> 
+
+<div class="content1"> 		
+{@zsshow.zsimgforitem}			
+</div>
+{#showad:1,0,no,no,no,0,0,0,招商分类间,{#classid},no,yes}|||</div>

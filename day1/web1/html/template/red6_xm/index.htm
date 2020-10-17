@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#pagetitle}</title>
+<meta property="qc:admins" content="31307116006112006375" />
+<meta content="{#pagedescription}" name="description"/>
+<meta content="{#pagekeywords}" name="keywords"/>
+<meta name="baiduspider" content="index, follow" />
+<meta name="GOOGLEBOT" content="index,follow,noarchive/">
+<meta name="Scooter" content="index, follow" />
+<link rel="Bookmark" href="favicon.ico"/>
+<link rel="Shortcut Icon" href="favicon.ico" />
+<link href="template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<script src="js/scrolltop.js" type="text/javascript" language="JavaScript"></script>
+<script language="JavaScript" src="/js/jquery.js"></script>
+<script src="/js/jquery.lazyload.js"></script>
+</head>
+<body>
+{#flyad}
+{#duilianad}
+<div class="main">
+{#showad:4,0,no,no,no,0,0,0,首页,顶部,no}
+<!--<div id='topad'><div id='boxtopadclose'><span onclick=topad.style.display='none'>×</span></div>
+{#showad:4,0,no,no,no,0,0,0,首页,顶部,no}
+</div>
+-->
+</div>
+{#sitetop}
+<div class="main">
+<div class="adStyle1">{#showad:首页,通栏1,0,0,0,0,no}</div>
+<div class="pagebody">
+<div class="left" style="width:240px">
+<div class="titles3">创业商机分类</div>
+<div id="flzs">{#showzsclass:1,8,6,4,5,2,2,5,yes,no}</div>
+<div style="margin:8px 2px 0 0" class="adStyle1">{#showad:首页,左侧图片1,0,0,0,0,no}</div>
+		
+</div>
+<div class="right" style="width:950px">
+<div class="adStyle1" style="margin:0 0 10px 0">{#showad:首页,A,0,175,75,0,no}</div>
+</div>
+</div>
+
+<div class="pagebody">
+{@zsclass.zsitem}
+</div>
+
+{#showad:首页,第二行,0,0,0,0,no}
+
+<div class="bordercccccc" style="margin-bottom:10px">
+{@zxclass.forindex}
+</div>
+
+<div class="titles">您可能喜欢的项目</div>
+<div class="content1">
+<div id="boxgd">
+		<div id="inboxgd">
+		<div id="boxgd1">
+	{@zsshow.sp}
+	</div>
+	<div id="boxgd2"></div>
+</div>
+</div>
+<script> 
+<!--
+var speed=10;
+var tab=document.getElementById("boxgd");
+var tab1=document.getElementById("boxgd1");
+var tab2=document.getElementById("boxgd2");
+tab2.innerHTML=tab1.innerHTML;
+function Marquee(){
+if(tab2.offsetWidth-tab.scrollLeft<=0)
+tab.scrollLeft-=tab1.offsetWidth
+else{
+tab.scrollLeft++;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+-->
+</script>
+</div>
+
+<div class="bordercccccc" style="margin-bottom:10px">
+{@zxclass.forindex2}
+</div>
+
+<div class="pagebody">
+    <div class="titles">创业项目导航</div>
+	<div class="flzs_zhankai">{#showzsclass:0,99,5,12,4,3,3,5,no,no}</div>	
+</div>
+
+
+<div class="bordercccccc" style="margin-bottom:10px">
+{@zxclass.forindex3}
+</div>
+
+<div class="pagebody">
+<!--
+<div class="title3"><span><a href='link.htm'>更多...</a></span> 图片链接</div>
+<div class="content">{@linkshow.LinkInIndexImg}</div>
+-->
+
+<div class="title3"><span><a href='link.htm'>更多...</a></span> <h3>文字链接</h3></div>
+<div class="content" style="margin-bottom:8px">{@linkshow.LinkInIndexText}</div>
+</div>
+
+<div id="dl5"><span>{#sitename}温馨恭贺双方合作愉快！诚信经营，财富共享</span></div>
+<div id="dlstepbox"  style="margin-bottom:8px">
+<div id="dlstep">
+<li id="dlstepli1">
+<div id="dlsteptitlein"><span>1 </span>登录网站</div>
+<div id="dlstepcontentin">输入{#siteurl}<br />网上搜索</div>
+</li>
+<li  id="dlstepli2">
+<div id="dlsteptitlein"><span>2 </span>寻找项目</div>
+<div id="dlstepcontentin">点击广告位查找<br />热门项目查找<br />根据搜索查找</div>
+</li>
+<li id="dlstepli3">
+<div  id="dlsteptitlein"><span>3 </span>留言，电话咨询</div>
+<div id="dlstepcontentin">电话咨询厂家<br />页面留言咨询<br />在线咨询</div>
+</li>
+<li id="dlstepli4">
+<div id="dlsteptitlein"><span>4 </span>上门考察</div>
+<div id="dlstepcontentin">进行考察核实<br />加盟要求<br />厂家政策支持</div>
+</li>
+<li id="dlstepli5">
+<div  id="dlsteptitlein"><span>5 </span>确定合作</div>
+<div  id="dlstepcontentin">双方沟通相关事宜<br />签订合同<br />加盟成功</div>
+</li>
+</div>
+</div>
+
+{#sitebottom}
+</div>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&img=0&pos=right&uid=0" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+<div style="display: none" id="goTopBtn"></DIV>
+<SCRIPT type=text/javascript>goTopEx();
+$(function() {
+$("img").lazyload({
+//placeholder : "/image/loading.gif", //用图片提前占位//placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+effect: "fadeIn", // 载入使用何种效果//effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+threshold: 200// 提前开始加载//threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉   
+	  });
+  });
+  </SCRIPT>
+</body>
+</html>

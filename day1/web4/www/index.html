@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File Upload</title>
+	<link rel="stylesheet" href="css/style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<h1>File Upload</h1>
+
+<div class="agile-its">
+	<h2>File Upload</h2>
+		<form enctype="multipart/form-data" action="upload.php" method="POST" />
+		<div class="agile-its">
+			<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+			<input name="upload_file" type="file" value="点击选择文件" />
+			<div class="agile-its">
+				<input type="submit" name="Upload" value="上传" />
+			</div>
+		</div>
+		</form>
+</div>
+</body>
+</html>
+

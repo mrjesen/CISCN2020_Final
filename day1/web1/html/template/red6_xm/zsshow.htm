@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}"/>
+<meta name="description" content="{#pagedescription}" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript"  src="/zs/zsshow.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script>
+$(document).ready(function(){  
+	$("#tel").blur(function() { //jquery 中change()函数  
+	$("#ts_tel").load(encodeURI("/ajax/dl_liuyan_check_ajax.php?action=checktel&id="+$("#tel").val()));
+	}); 
+ 
+});  
+</script>
+<style type="text/css">
+body {background: url({#bodybg}) {#bodybgrepeat};}
+</style>
+</head>
+<body>
+<SCRIPT type=text/javascript>kfguin="{#kfqq}";ws="{#sitename}"; companyname="在线客服"; welcomeword="您好,欢迎光临！<brT>请问,有什么可以帮到您的吗?"; type="1";</SCRIPT>
+<SCRIPT src="/3/kefu/js/kf.js" type=text/javascript></SCRIPT>
+{#sitetop}
+<div class="main">
+{#showad:6,0,yes,yes,yes,0,0,0,首页,展示页,no}
+<div class="pagebody">
+{#sm}
+</div>
+
+<div class="pagebody">
+	<form action="{#siteurl}/zs/dl_liuyan_save.php" method="post" name="ly" onSubmit="return CheckForms();">
+	<a name="guestbook" id="guestbook"></a>
+	  <div class="liuyanbg">
+      <table width="100%" border="0" cellpadding="3" cellspacing="1">
+        <tr> 
+              <td width="33%" align="right">联 系 人<font color=#FF0000>*</font></td>
+              <td width="67%" > <input name=name type=text id=name size=30 maxlength=50 onBlur="check_somane()"/>
+			  <input name="name2" id="name2" style="display:none" />
+			<span id="ts_name"></span>	
+              <input name="fbr" type="hidden" id="fbr" value="{#fbr}" />
+			  <input id="token" value="{#token}" type="hidden" name="token" /></td>
+            </tr>
+            <tr> 
+              <td align="right">手机 <font color=#FF0000>*</font></td>
+              <td > <input name='tel' type='text' id='tel' size='30' maxlength='50' />
+			  <input name="tel2" id="tel2" style="display:none" />
+			<span id="ts_tel"></span>              </td>
+            </tr>
+            <tr> 
+              <td align="right" >电子邮箱：</td>
+              <td > <input name=email type=text id=email size=30 maxlength=50 onBlur="check_email()" /> 
+			  <input name="email2" id="email2" style="display:none" />
+			<span id="ts_email"></span>              </td>
+            </tr>
+            <tr>
+              <td align="right">留言内容 <font color=#FF0000>*</font></td>
+              <td>
+			  
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width='35%'><textarea  name='contents' id='contents' cols="30" rows="8" onfocus='check_contents()' onblur='check_contents()'></textarea>
+					<input name="contents2" id="contents2" style="display:none" />
+			<br/><span id="ts_contents"></span>					</td>
+                    <td width='65%' class="liuyanbg2">
+<input name='chcontent' type='checkbox' id='chcontent1' onClick="showinfo('content',1);document.ly.contents.focus()" value='有兴趣开一个店，请寄资料或给我打电话。' /><label for='chcontent1' id='content1'>有兴趣开一个店，请寄资料或给我打电话。</label><br /> 
+<input name='chcontent' type='checkbox' id='chcontent2' onClick="showinfo('content',2);document.ly.contents.focus()" value='想了解招商细节，请尽快寄一份资料。' /> 
+                      <label for='chcontent2'  id='content2'>想了解招商细节，请尽快寄一份资料。</label><br /> 
+<input name='chcontent' type='checkbox' id='chcontent3' onClick="showinfo('content',3);document.ly.contents.focus()" value='我想找一个合适的项目做，想加入您们。' /> 
+                      <label for='chcontent3'  id='content3'>我想找一个合适的项目做，想加入您们。</label><br /> 
+<input name='chcontent' type='checkbox' id='chcontent4' onClick="showinfo('content',4);document.ly.contents.focus()" value='我加入你们后，您们还会提供哪些服务？' /> 
+                    <label for='chcontent4'  id='content4'>我加入你们后，您们还会提供哪些服务？</label> </td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input type="submit" class="button_big" name="tj" id="tj" value="填好了，提交"/></td>
+            </tr>
+          </table> 
+</div>
+</form>
+</div>
+</div>
+
+<div style="height:100px"></div>
+<div id="divbottomtouming"></div>
+<div id="divbottom">
+  <div class="main">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>招商电话：{#tel} </td>
+    <td align="right" style="font-size:18px">多咨询多留言，降低投资风险！</td>
+	<td><span class="bigbutton"><a href="#guestbook">马上留言</a></span></td>
+	
+  </tr>
+</table>
+
+</div>
+</div>
+{#sitebottom}
+</body>
+</html>

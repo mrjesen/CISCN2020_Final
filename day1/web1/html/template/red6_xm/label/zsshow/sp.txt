@@ -1,0 +1,1 @@
+sp|||empty|||0|||1|||0|||0|||20||||||rand|||10|||0|||<div class="boxshipin">|||<li><A href="show.php?id={#id}" target="_blank"><img src="{#img}" border="0" width="132" height="80"><br>{#proname}</A></li>|||</div>

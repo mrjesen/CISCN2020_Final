@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}" />
+<meta name="description" content="{#pagedescription}" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="left">
+<div class="station2">
+<span>{#showselectpage}</span>
+{#station}
+</div>
+<div class="box">
+<div class="boxbigclass"> 
+{#askclass}
+</div>
+</div>
+<div class="content2">
+
+{loop}
+<table border="0" cellspacing="0" cellpadding="5" width="100%"><tr>
+<td width="33%">{#listimg}<a href='{#link}'>{#title}</a>{#shuxing}</td>
+<td width="23%">{#answer_num} 回答</td>
+<td width="10%">{#zhuangtai}</td>
+<td width="10%">{#sendtime}</td>
+</tr>
+</table>
+<hr/>
+{/loop}
+
+</div>
+
+<div class='fenyei'>{#fenyei}</div>
+
+</div>
+<div class="right">
+
+<div class="titles"> 热门问答</div>
+      <div class="content1"> {@askshow.showzxhot} </div>
+
+<div class="titles"> 最近更新</div>
+      <div class="content1"> {@askshow.showzxnew} </div>
+
+</div>
+</div>
+</div>
+{#sitebottom}
+</body>
+</html>

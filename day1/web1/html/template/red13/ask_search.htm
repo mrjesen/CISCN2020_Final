@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}" />
+<meta name="description" content="{#pagedescription}" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="left">
+<div class="station2">
+ <span>
+
+</span>
+{#station}
+
+</div>
+<div class="left_content"> 
+ <form action="?" method="post" name="myform" id="form1">
+          
+  <table width="100%" border="0" cellspacing="0" cellpadding="8">
+    <tr> 
+      <td width="27%" align="right">关 键 词：</td>
+      <td width="73%"><input name="keyword" type="text" id="keyword3" value="{#keyword}" size="50" maxlength="255"  /> 
+        <input type="submit" name="Submit2" value="搜索" /></td>
+    </tr>
+    <tr> 
+      <td align="right">所属类别：</td>
+      <td>{#formbigclass}{#formsmallclass}</td>
+    </tr>
+	{#selected}
+  </table>
+        </form>
+</div>	
+<div class="boxitem">
+<ul>
+<li {#typeid999}><a href='/ask/search.php?typeid=999'>全部</a></li>
+<li {#typeid1}><a href='/ask/search.php?typeid=1'>已解决</a></li>
+<li {#typeid0} ><a href='/ask/search.php?typeid=0'>待解决</a></li>
+<li {#typeid2} ><a href='/ask/search.php?typeid=2'>高悬赏</a></li>
+</ul>
+</div>
+<div class="content2">
+{loop}
+<table border="0" cellspacing="0" cellpadding="5" width="100%"><tr>
+<td width="33%"><div class="height15">{#listimg} <img src="/image/ico_jinbi.gif" title="悬赏">{#jifen} <a href='{#link}'>{#title}</a>{#shuxing}</div></td>
+<td width="23%">{#answer_num} 回答</td>
+<td width="10%">{#zhuangtai}</td>
+<td width="10%">{#sendtime}</td>
+</tr>
+</table>
+<hr/>
+{/loop}
+</div>
+
+<div class='fenyei'>{#fenyei}</div>
+
+</div>
+<div class="right">
+
+<div class="titles"> 热门问题</div>
+<div class="content1">
+{@askshow.showzxhot}
+</div>
+
+<div class="titles"> 最近更新</div>
+<div class="content1">
+{@askshow.showzxnew}
+</div>
+
+</div>
+</div>
+</div>
+{#sitebottom}
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{#pagetitle}</title>
+<meta name="keywords" content="{#pagekeywords}" />
+<meta name="description" content="{#pagedescription}" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<link href="/template/{#siteskin}/jdimg.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jdimg.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  	$.focus("#focus001");
+		$.focus("#focus002");
+	});
+</script>
+<style type="text/css">
+.focus {width:300px; height:300px;}
+.focus img{border:0;width:300px; height:300px;}
+.focus ul li {width:300px; height:300px;  }
+.focus .btnBg {display:block;}
+.focus .btnBg {width:300px;}
+.focus .btn {width:300px;}
+</style>
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody" style="margin-top:10px">
+<div class="left">
+
+<div class="titles"><span><a href="/ask/search.php?elite=1">更多...</a></span>推荐的问题</div>     
+<div class="content1">{@askshow.elite}</div>
+
+<div class="titles"><span><a href="/ask/search.php?typeid=1">更多...</a></span>已解决问题</div>     
+<div class="content1">{@askshow.wancheng}</div>
+
+
+<div class="titles"><span><a href="/ask/search.php?typeid=0">更多...</a></span>待解决问题</div>     
+<div class="content1">{@askshow.wancheng_no}</div>
+</div>
+
+<div class="right">
+<div class="titles">问题搜索</div>
+<div class="content1">
+<form action="" method="post" name="myform2">
+<input name="keyword" type="text" style="width:130px"/> 
+  <input name="" type="submit"  onClick="myform2.action='/ask/search.php';myform2.target='_self'"value="搜索答案"/>
+  <input name="" type="submit" onClick="myform2.action='/ask/askadd.php';myform2.target='_self'" value="提问"/>
+</form>
+</div>
+ 
+<div class="titles">问题分类</div>
+<div class="content1">
+{#askclass}
+</div>
+
+</div>
+</div>
+</div>
+{#sitebottom}
+</body>
+</html>

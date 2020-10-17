@@ -1,0 +1,13 @@
+img1|||empty|||0|||1|||0|||0|||1||||||rand|||10|||1|||<table border="0" cellspacing="0" cellpadding="0">|||<tr>
+<td height="123px" width="140px"> 
+<table border="0" cellspacing="1" cellpadding="0" class="bgcolor2">
+<tr>
+<td bgcolor="#FFFFFF" align="center" height="110" width="130"><A href="show.php?id={#id}" target="_blank"><img src="{#img}" border="0" onload=resizeimg(110,110,this)></A></td>
+</tr>
+</table>
+</td>
+<td>
+<div><A href="show.php?id={#id}" target="_blank" style="color:#ff6600;font-weight:bold">{#proname}</a></div>
+<div>{#prouse}</div>
+</td>
+</tr>|||</table>

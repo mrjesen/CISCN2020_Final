@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#pagetitle}</title>
+<meta name="keywords" content="pagekeywords"/>
+<meta name="description" content="pagedescription"/>
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="left">
+<div class="station2">
+{#station}
+</div>
+      <div class="left_content" style="margin-bottom:8px"> <img src="/image/arrow.gif" /> 
+        <strong>按分类浏览</strong> 
+        <div style="padding:5px 0 0 24px">
+{#dlclass}
+</div> 
+</div>
+
+        
+      <div class="left_content"> {#dllist} </div>			
+
+</div>
+<div class="right">
+<div class="title1">热门搜索</div>
+<div class="content1">
+{#keyword:dl,32,4,}
+</div>
+<div class="title1">按代理区域查找</div>
+<div class="content1">
+{#ShowProvince}
+</div>
+
+</div>
+</div>
+{#sitebottom}
+</div>
+</body>
+</html>

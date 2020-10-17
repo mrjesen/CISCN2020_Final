@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{#pagetitle}</title>
+<meta content="{#pagedescription}" name="description" />
+<meta content="{#pagekeywords}" name="keywords" />
+<link href="/template/{#siteskin}/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="/js/jquery.js"></script>
+<script src="/js/jquery.lazyload.js"></script>
+<script type="text/javascript">
+    var CRT = 6; // 如果大于等于3
+    jQuery (function ($){
+        $("div.boxbigclass li").filter ("li:gt("+(CRT-1) +")").hide().filter (":last").show ().click(function (){
+            $(this).siblings ("li:gt("+(CRT-1)+")").toggle();
+       		var more = document.getElementById("more");   
+			if (more.innerHTML == "显示更多..."){
+ 				more.innerHTML = "收起"; 
+			}else{
+				more.innerHTML = "显示更多...";
+			}
+	    });
+    });
+</script>
+</head>
+<body>
+{#sitetop}
+<div class="main">
+<div class="pagebody">
+<div class="right"> 
+<div class="titles"><span>&nbsp;</span><h3>查看过的</h3></div>
+<div class="content1">{#showcookiezs:3,60,60,5}</div>
+</div>
+
+<div class="left"> 
+<div class="station2">{#station}</div>
+
+<div class="box">
+<div class="boxbigclass">{#zsclass} <li id="more">显示更多...</li></div>
+</div>
+
+<div class="left_content">
+<div style="text-align:right;">
+  <form name="form1" method="get" action="/zs/zs_list.php">
+  <select name="province" id="province"></select>
+<select name="city" id="city"></select>
+<select name="xiancheng" id="xiancheng"></select>
+<script src="/js/area.js"></script>
+<script type="text/javascript">
+new PCAS('province', 'city', 'xiancheng', '{#province}', '{#city}', '{#xiancheng}');
+</script>
+    {#form_sj}{#form_img}{#form_vip}
+  <input type=submit value="筛选"/><input name="b" type="hidden" value="{#b}" />
+<input name="s" type="hidden" value="{#s}"/>{#form_px}{#showselectpage}{#form_xs}
+</form>
+</div>
+{zs}
+<form action='/zs/contrast.php' method='post' name='form2' target='_blank'>
+<div style='padding:5px 10px 15px 5px;margin-top:-30px'>
+<img src='/image/ico-db.gif' width='14' height='16' style="margin-right:6px">
+<input type='submit' name='Submit' value='对比选中的信息' onClick="return anyCheck(this.form,'duibi')">
+</div> 
+
+<div class="content4">
+{loop_window}
+<li>
+<table width='130' height='130' border='0' cellpadding='0' cellspacing='1' class='bgcolor2'>
+<tr>
+<td align='center' bgcolor='#FFFFFF'> 
+<a href='{#url}' target='_blank'>
+<img data-original="{#img}"  border='0' onload="resizeimg(120,120,this)">
+</a>
+</td>
+</tr>
+</table>
+<input name='id[]' type='checkbox' id='id' value='{#id}'><br/>
+{#proname:8}
+</li>
+{/loop_window}
+
+{loop_list}
+<div id='Layer{#i}' class='hiddiv'></div>
+<table  width='100%' border='0' cellspacing='0' cellpadding='0' class="zslist" >
+<tr onClick='setbgcolor(this)'> 
+<td width='30' align='center'> <input name='id[]' type='checkbox' id='id' value='{#id}' onClick="return anyCheck(this.form,'xuanzhe')"></td>
+<td width='150'><table width='130' height='130' border='0' cellpadding='0' cellspacing='1' class='bordercccccc'>
+<tr> 
+<td align='center' onMouseOver="showfilter(Layer{#i});window.document.getElementById('Layer{#i}').innerHTML='<img src={#imgbig} width=260>'" onMouseOut='showfilter(Layer{#i})'>
+<a href='{#url}'><img data-original="{#img}" onload="resizeimg(120,120,this)"></a>
+</td>
+</tr>
+</table></td>
+<td width='800'><table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr> 
+<td height='30' colspan='2'><a href='{#url}' class="bigbigword bold">{#proname:30}</a>{#dl_num}{#elite}</td>
+</tr>
+<tr>
+<td width='57%' valign='top' style='padding-right:10px'> 包装规格：{#shuxing0}<br>
+产品特点：{#prouse:20}<br>
+零售价格：¥{#shuxing1}
+<div class="zslist_button">
+  <li><div class="lxfs"><a href='{#url}#contact' target='_blank'></a></div></li>
+  <li><div class="liuyan"><a href='{#url}#dl_liuyan' target='_blank'></a></div></li>
+  <li><div class="shoucang"><a href="javascript:void(0)" rel="sidebar" onClick="shoucang('{#siteurl}{#url}','{#proname}')"></a></div></li>
+  <li>{#qq}</li>  </div>
+</td>
+<td width='43%' valign='top'> <a href='{#zturl}' target='_blank'>{#comane}</a>
+{#grouppic}{#renzheng}
+<br>
+招商区域：{#province}{#city} <br>
+更新时间：{#sendtime}</td>
+</tr>
+</table> </td></tr>
+</table>
+<div class='boxxian'></div>
+{/loop_list}
+</div>
+</form>
+<div style='clear:both'></div>
+<div class='fenyei'>{#fenyei}</div>
+{/zs}
+
+</div>
+			
+</div>
+</div>
+</div>
+{#sitebottom}
+<script type=text/javascript>
+$(function() {
+$("img").lazyload({
+placeholder : "/image/logo.png",  //用图片提前占位//placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+effect: "fadeIn", // 载入使用何种效果//effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+threshold: 200,// 提前开始加载//threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉   
+failurelimit : 10 // 图片排序混乱时	 	 
+	  });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Monster Battle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="./static/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="./static/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="./static/util.css">
+	<link rel="stylesheet" type="text/css" href="./static/main.css">
+<!--===============================================================================================-->
+	<style>
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 8px 16px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+		.button2 {
+			background-color: white;
+			color: black;
+			border: 2px solid black;
+		}
+
+		.button2:hover {
+			background-color: black;
+			color: white;
+		}
+		.select {
+			display: inline-block;
+			width: 560px;
+			position: relative;
+			vertical-align: middle;
+			padding: 0;
+			overflow: hidden;
+			background-color: #fff;
+			color: black;
+			border: 0px ;
+			text-shadow: none;
+			border-radius: 4px;
+			transition: box-shadow 0.25s ease;
+			z-index: 0;
+			left:-5px;
+		}
+		.text {
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('static/bg-05.png');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="opacity: 0.7">
+				<span class="login100-form-title p-b-49">
+					Welcome To Monster Battle
+				</span>
+				<center>
+<!--					<font color="red" size="5px">游戏介绍</font><br>-->
+					<font><B>游戏介绍</B>：玩家选择英雄并携带一种物品与怪兽<B>地穴领主</B>战争，每个英雄有着不同的属性和被动技能，击败怪兽取得胜利即可得到一种名为flag的神秘字符串。以下分别是英雄介绍、物品介绍、Monster介绍</font><br>
+					<br>
+
+					<font><B>战神领主</B>：他以战神领主的称号在世界上游荡，言语尖酸，动作凶猛，作为一支单兵军队里高高在上的高级指挥官。他能释放出潜藏的力量，唤醒战场上每一个战士的野性，投入到令人兴奋的战争。攻击力⚔10-30点，拥有技能<B>旋风飞斧</B>，触发后下次攻击的攻击力+5。</font><br>
+					<font><B>奥术祭司</B>：一个轮廓不匀的瘦长身影迈着怪异的步伐纵横在战场上，寻找着敌人的致命弱点，用他可怕的巫术造成严重的伤害，没有人可以质疑其中的力量。攻击力⚔15-25点，拥有技能<B>巫毒恢复</B>，触发后恢复10点生命值。</font><br>
+					<font><B>暗夜游侠</B>：她曾是地底世界幽暗地狱的一名优秀的弓箭手，她优秀的射手天赋让她能够每支箭矢都造成相近的伤害。据说她可以把她的箭失如同狂风般释放出去，从而将敌人在一瞬间消灭干净。攻击力⚔19-21点，拥有技能<B>百步穿杨</B>，触发后下次攻击的攻击力+7。</font><br>
+					<br>
+
+					<font><B>治疗药膏</B>：使用后回复10点生命值</font><br>
+					<font><B>白银之锋</B>：使用后的一次攻击将触发暴击并造成130%的伤害</font><br>
+					<font><B>邪恶镰刀</B>：使用后将对方的一次攻击的攻击力变为80%</font><br>
+					<br>
+
+					<font><B>地穴领主</B>：地穴领主这种古老邪恶巨大的地下生物是地下蜘蛛王国Azjol'Nerub的强大君王。在那场传说中的蜘蛛战争时里，尼鲁布被狂暴的巫妖王被攻陷以后，阴险狡诈的地穴领主便成为了巫妖王的手下，并被赋予了无穷的力量与亡灵的永生。你时常能听到他在轻声低语：I serve only the frozen throne</font><br>
+					<font>攻击力⚔40-40点，拥有技能<B>缩地</B>，当地穴领主的血量低于80时，他便遁入底下，从地下蜘蛛王国中汲取力量，生命值增加20点，只能触发一次。</font><br>
+					<br>
+
+					<button class="button button2" onclick="window.location.href = '/start'">开始游戏</button>
+					<button class="button button2" onclick="window.location.href = '/source'">查看源码</button>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="./static/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/popper.js"></script>
+	<script src="./static/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/moment.min.js"></script>
+	<script src="./static/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="./static/main.js"></script>
+</body></html>

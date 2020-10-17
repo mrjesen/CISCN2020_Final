@@ -1,0 +1,1 @@
+Attention: you can only fix dashboard.php, and you only have writable permissions for this file(dashboard.php). Always remember that dont affect normal function or you will check failed!
